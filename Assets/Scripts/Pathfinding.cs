@@ -11,6 +11,7 @@ public class Pathfinding : MonoBehaviour
 
     public bool randomGrid;
     public Vector2Int[] addStops;
+    public float obstacleProb;
 
     private Vector2Int[] directions = new Vector2Int[]
     {
@@ -55,7 +56,7 @@ public class Pathfinding : MonoBehaviour
     private void Start()
     {
         if (randomGrid)
-            GenerateRandomGrid(5, 5, 0.5f);
+            GenerateRandomGrid(5, 5, obstacleProb);
         if (addStops.Length > 0)
             foreach (Vector2Int stop in addStops)
                 AddObstacle(stop);
