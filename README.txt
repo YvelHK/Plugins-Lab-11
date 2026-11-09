@@ -1,0 +1,4 @@
+1. BFE evaluates every node sequentially and calculates the path from knowing all nodes. A* moves in a path and chooses the best next move by examining the distance to the start and estimated distance to the end from each node it passes through and its successors. Dijkstra's behaves like A*, but ignores the end.
+2. The path was already calculated so it doesn't account for the new obstacle, but that can be avoided by clearing and recalculating after adding an obstacle. (This could get pretty expensive in a larger project than this one though.)
+3. A* is in most cases the best algorithm, and by combining it with a NavMesh you can navigate open worlds the same way as you would a grid.
+4. Dijkstra's algorithm accounts for weighted grids most effectively.
